@@ -1,34 +1,14 @@
-def fibonacci(n):  
-    Fibo = []  
-    if n <= 0:  
-        return Fibo   
-    elif n == 1:  
-        Fibo.append(0)  
-        return Fibo   
-    else:  
-        Fibo.append(0)  
-        Fibo.append(1) 
-        for i in range(2, n): 
-            Fibo[0] = 0
-            Fibo[1] = 1 
-            Fibo[2] = 1 
-            Fibo[3] = 2
-            Fibo[i] = Fibo[i-1] + Fibo[i-2] 
-            Fibo.append(Fibo[i])  
+def chuan_hoa(name):    
+    name = ' '.join(name.strip().split())  
+    words = name.split()    
+    normalized_words = []  
     
-    return Fibo  
+    for word in words:  
+        first_char = word[0].upper() if word else ''    
+        normalized_word = first_char + word[1:]  
+        normalized_words.append(normalized_word)  
+    return ' '.join(normalized_words)  
 
-def nhap():  
-    while True:  
-        try:  
-            n = int(input('Nhập vào một số nguyên dương n: '))  
-            if n > 0:  
-                return n  
-            else:  
-                print("Nhập lại một số nguyên dương n (n > 0): ")  
-        except :  
-            print("Đầu vào không hợp lệ. Vui lòng nhập một số nguyên.") 
-
-GT = nhap()
-T = fibonacci(GT)
-print(T)
+input_name = input("Nhập họ và tên cần chuẩn hóa: ")  
+ten_chuan = chuan_hoa(input_name)  
+print("Chuỗi họ tên đã được chuẩn hóa là:", ten_chuan)
