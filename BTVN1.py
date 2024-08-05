@@ -51,9 +51,9 @@ def check_sorted(a):
         print("NO")  
 
 def create_new_list(a, n):  
-    new_list =[]
-     newPT = [sum(a[0,i-1]) for i in range(n)]
-    new_list.append(newPT)
+    new_list = []  
+    newPT = [sum(a[0:i]) for i in range(1, n + 1)]  
+    new_list.append(newPT)  
     return new_list  
 
 def sort_list(n):  
@@ -66,7 +66,7 @@ def main():
     N=nhap() 
     b=nhapPT(N)  
     x = int(input("Nhập số X để kiểm tra số lần xuất hiện: "))  
-    KT(b x)   
+    KT(b, x)   
     thay_the(b)   
     find(b)  
     y = int(input("Nhập số Y để chèn vào đầu list: "))  
