@@ -1,19 +1,33 @@
-def nhap():
-    while True:
-        try:
-            x = int(input('nhap so luong thanh vien'))
-            if x>0:
-                return x
-        except:
-            print('so luong thanh vien khong hop le')
+def nhap():  
+    while True:  
+        try:  
+            x = int(input('Nhập số lượng thành viên: '))  
+            if x > 0:  
+                return x  
+        except :  
+            print('Số lượng thành viên không hợp lệ. Vui lòng nhập lại.')  
 
-def nhapDS(n):
-    DS = []
-    for i in range(n):
-        x = float(input(f'thanh vien thu {i+1} co so diem: '))
-        DS.append(x)
-    return dict(DS)
+def nhapDS(n):  
+    c = {}  
+    for i in range(n):  
+        while True:  
+            try:  
+                key = input()  
+                values = float(input()) 
+                c[key] = values 
+                break   
+            except:  
+                print('Nhập không hợp lệ. Vui lòng nhập lại.')  
+    return c
+
 
 a = nhap()
-b = nhapDS(a)
-print('ban ngu nhat la:',min(b.(values)))
+b = nhapDS(a)  
+m = min(b.values())  
+
+for key, values in b.items():  
+    if values == m:  
+        ten = key 
+        break  
+
+print(f'Thành viên có số điểm thấp nhất: {ten}')

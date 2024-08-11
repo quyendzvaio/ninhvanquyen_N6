@@ -10,7 +10,7 @@
 # import time
 # start_time = time.time()
 # T=0
-# my_list = [i,T+=i if i%2==0 for i in range(1,int(1e5))]
+# my_list = [i if i%2==0 for i in range(1,int(1e5))]
 # T+=i
 # print(T)   
 # end_time = time.time()
