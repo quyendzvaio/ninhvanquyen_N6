@@ -11,5 +11,5 @@ def nhap():
 a = nhap()
 if a/3 != 0:
     print('so buoc toi thieu chu rua can di = ', int(a/3)+1)
-else:
+else:       
     print('so buoc toi thieu can di = ',a/3)

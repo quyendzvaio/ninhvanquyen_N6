@@ -1,4 +1,4 @@
-def nhapDS() :
+def nhapDS() -> str: #se mac dinh kieu tra ve la str
     collect = {}
     print('Ket thuc nhap vao bang cach nhan Enter 2 lan')
     while True :
@@ -14,7 +14,7 @@ def nhapDS() :
     return collect
 
 def bosung(c):
-    print('nhap bo sung thong tin mot sinh vien')
+    print('nhap bo sung thong tin sinh vien')
     key = input(f'ma sinh vien: ')
     value = float(input())
     c[key] = value

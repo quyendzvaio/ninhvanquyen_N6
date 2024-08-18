@@ -14,3 +14,4 @@ print(my_dict['score']['math'])
 #truy xuat phan tu trong dictionary
 for (key,value) in my_dict.items():
     print(key,value)
+    
